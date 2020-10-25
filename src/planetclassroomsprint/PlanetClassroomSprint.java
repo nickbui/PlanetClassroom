@@ -1,4 +1,4 @@
-package PlanetClassroomSprint1;
+package planetclassroomsprint;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
  *
  * @author Nicholas
  */
-public class PlanetClassroomSprint1 extends Application {
+public class PlanetClassroomSprint extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {

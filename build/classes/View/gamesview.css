@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: #f6f6fe;
+}
+
+#mathGame{
+    -fx-background-image: url("images/planet.png");
+    -fx-background-color: none;
+}
+
+#scienceGame{
+    -fx-background-image: url("images/scienceplanet.png");
+    -fx-background-color: none;
+}

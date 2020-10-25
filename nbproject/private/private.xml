@@ -3,16 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/View/loginview.css</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/planetclassroomsprint1/PlanetClassroomSprint1.java</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/View/studentmenuview.css</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/Model/Student.java</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/Model/Model.java</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/Controller/LoginController.java</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/Controller/StudentMenuController.java</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/Model/Teacher.java</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/Controller/FxmlLoader.java</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroomSprint1/src/Model/UserList.java</file>
+            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/Controller/StudentMenuController.java</file>
+            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/Controller/MathGameController.java</file>
+            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/View/studentmenuview.css</file>
         </group>
     </open-files>
 </project-private>

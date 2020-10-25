@@ -16,7 +16,7 @@ public final class Model {
     private final Student student1;
     private final Student student2;
     private final Student student3;
-    private final Teacher teacher1;
+
     
     public Model() {
     
@@ -25,7 +25,6 @@ public final class Model {
     student2 = new Student(02,"Dan","Supper", 85, "Quack", "password");
     student3 = new Student(03,"Brad","Riddle", 89, "Brad", "password");
     
-    teacher1 = new Teacher(01,"Matt","Mcgee","Matt", "password");
     
     uL = new UserList();
 
