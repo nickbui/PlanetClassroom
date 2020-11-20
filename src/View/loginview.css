@@ -20,3 +20,13 @@
   -fx-background-color: transparent;
    -fx-text-fill: white;
 }
+
+#signupBttn{
+    -fx-background-color:none;
+    -fx-text-fill: white;
+}
+
+#signupBttn:hover{
+    -fx-border-color: white;
+}
+

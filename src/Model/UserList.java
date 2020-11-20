@@ -12,13 +12,13 @@ import java.util.ArrayList;
  * @author Nicholas
  */
 public class UserList {
+   
     private ArrayList<String> authenticatedUsers;
     private ArrayList<String> authenticatedPassword;
 
     public UserList() {
         this.authenticatedUsers = new ArrayList<>();
         this.authenticatedPassword = new ArrayList<>();
-       
     }
 
     /**
@@ -73,5 +73,11 @@ public class UserList {
         this.authenticatedPassword = authenticatedPassword;
     }
    
-
+    public int userNumber(ArrayList<String> authenticatedUsers) {
+        int userNumber = 0;
+        for(int i = 0; i< authenticatedUsers.size(); i++) {
+            userNumber = i;
+        }
+        return userNumber + 1;
+    }
 }

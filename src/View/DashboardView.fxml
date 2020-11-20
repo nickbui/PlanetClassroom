@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -12,10 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="760.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Controller.DashboardController">
-    <stylesheets>
-        <URL value="@dashboardview.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="760.0" styleClass="mainFxmlClass" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashboardController">
    <children>
       <VBox layoutX="-2.0" layoutY="-3.0" prefHeight="400.0" prefWidth="760.0">
          <children>
@@ -23,29 +21,48 @@
                <children>
                   <TextField fx:id="searchbox" alignment="TOP_LEFT" promptText="search">
                      <HBox.margin>
-                        <Insets left="30.0" top="30.0" />
+                        <Insets left="30.0" top="35.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button fx:id="bellBttn" mnemonicParsing="false" prefHeight="33.0" prefWidth="31.0">
+                  <Text fx:id="scoreText" strokeType="OUTSIDE" strokeWidth="0.0">
                      <HBox.margin>
-                        <Insets left="475.0" top="20.0" />
+                        <Insets left="450.0" top="35.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="coinBttn" mnemonicParsing="false" prefHeight="34.0" prefWidth="36.0">
+                     <HBox.margin>
+                        <Insets top="30.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="avatarBttn" mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0">
+                  <MenuButton fx:id="avatarBttn" mnemonicParsing="false" prefHeight="33.0" prefWidth="50.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#handleLogOutBttn" text="Log out" />
+                    </items>
                      <HBox.margin>
-                        <Insets left="10.0" top="20.0" />
+                        <Insets left="15.0" top="30.0" />
                      </HBox.margin>
-                  </Button>
+                  </MenuButton>
                </children>
             </HBox>
-            <VBox prefHeight="274.0" prefWidth="600.0">
+            <VBox prefHeight="325.0" prefWidth="760.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Games">
+                  <Text fx:id="welcomeText" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Games">
                      <font>
                         <Font name="Roboto Black" size="21.0" />
                      </font>
                      <VBox.margin>
-                        <Insets left="30.0" />
+                        <Insets left="30.0" top="10.0" />
                      </VBox.margin>
                   </Text>
                   <TableView prefHeight="218.0" prefWidth="540.0">

@@ -30,7 +30,7 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Text fill="WHITE" layoutX="583.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In" wrappingWidth="81.13671875">
+      <Text fx:id="signinText" fill="WHITE" layoutX="583.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In" wrappingWidth="81.13671875">
          <font>
             <Font name="Roboto Black" size="25.0" />
          </font>
@@ -54,23 +54,27 @@
          </font>
       </Text>
       <PasswordField fx:id="passwordField" layoutX="551.0" layoutY="244.0" onAction="#handleSubmitButtonAction" prefHeight="26.0" prefWidth="173.0" stylesheets="@loginview.css" />
-      <Button fx:id="loginBttn" layoutX="587.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="25.0" prefWidth="101.0" stylesheets="@loginview.css" text="Login" />
-      <Text fx:id="actiontarget" fill="#f8f8f8" layoutX="518.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Greetings!" textAlignment="CENTER" wrappingWidth="66.13671576976776" />
+      <Button fx:id="loginBttn" layoutX="587.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="25.0" prefWidth="101.0" stylesheets="@loginview.css" text="Login" />
+      <Text fx:id="actiontarget" fill="#f8f8f8" layoutX="523.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Greetings!" textAlignment="CENTER" wrappingWidth="66.13671576976776">
+         <font>
+            <Font size="9.0" />
+         </font></Text>
       <Text fill="WHITE" layoutX="-49.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To Planet Classroom" textAlignment="CENTER" wrappingWidth="532.13671875">
          <font>
             <Font name="Roboto Bold" size="41.0" />
          </font>
       </Text>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="391.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="617.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="105.0" fitWidth="66.0" layoutX="605.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/astro.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="speech" fitHeight="87.0" fitWidth="151.0" layoutX="502.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="speech" fitHeight="70.0" fitWidth="81.0" layoutX="517.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/speech.png" />
          </image>
       </ImageView>
+      <Button fx:id="signupBttn" layoutX="608.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleSignUpBttn" stylesheets="@loginview.css" text="Sign up!" />
    </children>
 </AnchorPane>

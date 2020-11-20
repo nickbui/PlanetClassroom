@@ -55,7 +55,7 @@ public class MathGame24 {
         return false;
     }
     
-    public long calculate(long num1, long num2, String operator){
+    public double calculate(double num1, double num2, String operator){
         switch(operator) {
             case "+":
                 return num1 + num2;

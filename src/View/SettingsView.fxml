@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="settingAnchor" prefHeight="503.0" prefWidth="760.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SettingsController">
+   <children>
+      <Text layoutX="168.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Theme" wrappingWidth="78.96484375">
+         <font>
+            <Font name="Roboto Black" size="19.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="background" arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="50.0" layoutX="145.0" layoutY="149.0" stroke="#dadada" strokeType="INSIDE" width="100.0" />
+      <Circle fx:id="trigger" fill="WHITE" layoutX="170.0" layoutY="174.0" radius="25.0" stroke="#aeaeae" strokeType="INSIDE" />
+      <Text fx:id="themeText" layoutX="179.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Roboto" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

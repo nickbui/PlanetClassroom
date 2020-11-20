@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="894.0" style="-fx-background-color: #f6f6fe;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StudentMenuController">
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StudentMenuController">
    <left>
       <VBox fx:id="box" alignment="TOP_CENTER" prefHeight="503.0" prefWidth="134.0" stylesheets="@studentmenuview.css" BorderPane.alignment="CENTER">
          <children>
@@ -35,11 +35,11 @@
                <font>
                   <Font name="Roboto Black" size="17.0" />
                </font></Button>
-            <Button fx:id="profileBttn" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="89.0" prefWidth="134.0" stylesheets="@studentmenuview.css" text="Profile">
+            <Button fx:id="profileBttn" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#handleProfileBttn" prefHeight="89.0" prefWidth="134.0" stylesheets="@studentmenuview.css" text="Profile">
                <font>
                   <Font name="Roboto Black" size="17.0" />
                </font></Button>
-            <Button fx:id="settingsBttn" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="89.0" prefWidth="134.0" stylesheets="@studentmenuview.css" text="Settings">
+            <Button fx:id="settingsBttn" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#handleSettingsBttn" prefHeight="89.0" prefWidth="134.0" stylesheets="@studentmenuview.css" text="Settings">
                <font>
                   <Font name="Roboto Black" size="17.0" />
                </font></Button>

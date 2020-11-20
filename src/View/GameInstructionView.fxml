@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="503.0" prefWidth="760.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GameInstructionController">
+   <children>
+      <Text fx:id="instructionText" layoutX="183.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="393.8310546875">
+         <font>
+            <Font name="Roboto Black" size="34.0" />
+         </font>
+      </Text>
+      <Text layoutX="311.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instruction">
+         <font>
+            <Font name="Roboto Black" size="28.0" />
+         </font>
+      </Text>
+      <Button layoutX="320.0" layoutY="368.0" mnemonicParsing="false" onAction="#handlePlayBttn" prefHeight="43.0" prefWidth="120.0" text="Play" />
+   </children>
+</AnchorPane>

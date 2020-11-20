@@ -5,25 +5,35 @@
  */
 package Model;
 
+
 /**
  *
  * @author Nicholas
  */
-public class Student {
+public final class Student {
+   
     private int studentID;
     private String firstName;
     private String lastName;
-    private int grade;
     private String username;
     private String password;
+    private int score;
+    private int sticker;
+    private boolean darkTheme;
     
-    public Student(int studentID, String firstName, String lastName, int grade, String username, String password){
+    
+
+
+    
+    public Student(int studentID, String firstName, String lastName, String username, String password, int score, int sticker, boolean darkTheme){
         this.studentID = studentID;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.grade = grade;
         this.username = username;
         this.password = password;
+        this.score = score;
+        this.sticker=sticker;
+        this.darkTheme = darkTheme;
     }
 
     /**
@@ -69,20 +79,6 @@ public class Student {
     }
 
     /**
-     * @return the grade
-     */
-    public int getGrade() {
-        return grade;
-    }
-
-    /**
-     * @param grade the grade to set
-     */
-    public void setGrade(int grade) {
-        this.grade = grade;
-    }
-
-    /**
      * @return the username
      */
     public String getUsername() {
@@ -109,5 +105,48 @@ public class Student {
     public void setPassword(String password) {
         this.password = password;
     }
-   
+
+    /**
+     * @return the score
+     */
+    public int getScore() {
+        return score;
+    }
+
+    /**
+     * @param score the score to set
+     */
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    /**
+     * @return the sticker
+     */
+    public int getSticker() {
+        return sticker;
+    }
+
+    /**
+     * @param sticker the sticker to set
+     */
+    public void setSticker(int sticker) {
+        this.sticker = sticker;
+    }
+
+    /**
+     * @return the darkTheme
+     */
+    public boolean isDarkTheme() {
+        return darkTheme;
+    }
+
+    /**
+     * @param darkTheme the darkTheme to set
+     */
+    public void setDarkTheme(boolean darkTheme) {
+        this.darkTheme = darkTheme;
+    }
+
+
 }

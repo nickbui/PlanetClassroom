@@ -5,6 +5,12 @@
  */
 package Model;
 
+import java.io.FileReader;
+import java.util.ArrayList;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 /**
  *
  * @author Nicholas
@@ -12,32 +18,19 @@ package Model;
 public final class Model {
     
 
-    private final UserList uL;
-    private final Student student1;
-    private final Student student2;
-    private final Student student3;
-
+    private UserList uL;
+    private ArrayList<Student> studentList = new ArrayList<>();
+    private JSONObject userObject;
+    private JSONArray studentArr = new JSONArray();
     
     public Model() {
-    
-    
-    student1 = new Student(01,"Nick","Bui", 90, "Nick", "password");
-    student2 = new Student(02,"Dan","Supper", 85, "Quack", "password");
-    student3 = new Student(03,"Brad","Riddle", 89, "Brad", "password");
-    
-    
-    uL = new UserList();
-
-    
-    this.addUserToList(student1.getUsername());
-    this.addPassToList(student1.getPassword());
-    
-    this.addUserToList(student2.getUsername());
-    this.addPassToList(student2.getPassword());
-    
-    this.addUserToList(student3.getUsername());
-    this.addPassToList(student3.getPassword());
-    
+        uL = new UserList();
+        this.userdataFromJSON();
+        for (int i= 0; i<studentList.size(); i++) {
+            this.addUserToList(studentList.get(i).getUsername());
+            this.addPassToList(studentList.get(i).getPassword());
+        }
+   
     }
 
 
@@ -49,11 +42,86 @@ public final class Model {
     }
     
      public void addUserToList(String user) {
-        uL.getAuthenticatedUsers().add(user);
+        getuL().getAuthenticatedUsers().add(user);
     }
     
     public void addPassToList(String pass) {
-        uL.getAuthenticatedPassword().add(pass);
+        getuL().getAuthenticatedPassword().add(pass);
+    }
+
+    /**
+     * @param uL the uL to set
+     */
+    public void setuL(UserList uL) {
+        this.uL = uL;
+    }
+  
+    /**
+     * @return the studentList
+     */
+    public ArrayList<Student> getStudentList() {
+        return studentList;
+    }
+
+    /**
+     * @param studentList the studentList to set
+     */
+    public void setStudentList(ArrayList<Student> studentList) {
+        this.studentList = studentList;
     }
     
+     public void userdataFromJSON(){
+        Object ob;
+        JSONParser jp = new JSONParser();
+            try{
+                FileReader reader = new FileReader("student.json");
+                ob = jp.parse(reader);
+                studentArr = (JSONArray)ob;
+                reader.close();
+            } catch(Exception e) {
+                System.out.println("Something went wrong");
+        }
+        for (int i= 0; i<getStudentArr().size();i++) {
+            setUserObject((JSONObject)getStudentArr().get(i));
+            int studentIDJSON = Integer.parseInt(getUserObject().get("student id").toString());
+            String firstNameJSON = getUserObject().get("first name").toString();
+            String lastNameJSON = getUserObject().get("last name").toString();
+            String userJSON = getUserObject().get("username").toString();
+            String passwordJSON = getUserObject().get("password").toString();
+            int scoreJSON = Integer.parseInt(getUserObject().get("score").toString());
+            int stickerIDJSON = Integer.parseInt(getUserObject().get("sticker id").toString());
+            boolean darkTheme = (Boolean) getUserObject().get("dark theme");
+            Student JSONStudent = new Student(studentIDJSON, firstNameJSON, lastNameJSON, userJSON, passwordJSON,scoreJSON,stickerIDJSON, darkTheme);
+            studentList.add(JSONStudent);
+        }
+    }
+
+    /**
+     * @return the userObject
+     */
+    public JSONObject getUserObject() {
+        return userObject;
+    }
+
+    /**
+     * @param userObject the userObject to set
+     */
+    public void setUserObject(JSONObject userObject) {
+        this.userObject = userObject;
+    }
+
+    /**
+     * @return the studentArr
+     */
+    public JSONArray getStudentArr() {
+        return studentArr;
+    }
+
+    /**
+     * @param studentArr the studentArr to set
+     */
+    public void setStudentArr(JSONArray studentArr) {
+        this.studentArr = studentArr;
+    }
+  
 }

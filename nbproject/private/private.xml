@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
+        <file>
+            <url>src/Controller/StudentMenuController.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>66</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/Model/ScienceGame.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>23</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/Controller/ScienceGameController.java</file>
             <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/Controller/StudentMenuController.java</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/Controller/MathGameController.java</file>
-            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/View/studentmenuview.css</file>
+            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/Model/Model.java</file>
+            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/Controller/DashboardController.java</file>
+            <file>file:/C:/Users/Nicholas/Documents/NetBeansProjects/PlanetClassroom/src/Controller/LoginController.java</file>
         </group>
     </open-files>
 </project-private>

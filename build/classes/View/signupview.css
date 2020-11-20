@@ -1,0 +1,30 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: linear-gradient(to top right, #c9246c, #1f6d72);
+}
+
+
+#astropic{
+    -fx-background-image: url("images/1974.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 500px;
+    -fx-background-position: 50%;
+    -fx-background-color: transparent;
+}
+
+#joinBttn{
+    -fx-background-color: none;
+    -fx-border-color: white;
+}
+
+#goBackBttn{
+    -fx-background-color: none;
+}
+
+#goBackBttn:hover{
+    -fx-background-color: white;
+}
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="650.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignupViewController">
+    <stylesheets>
+        <URL value="@signupview.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="221.0" fitWidth="232.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/signup.png" />
+         </image>
+      </ImageView>
+      <VBox fx:id="signupBox" alignment="CENTER" layoutX="55.0" layoutY="29.0" prefHeight="561.0" prefWidth="391.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up!">
+               <font>
+                  <Font name="Roboto Black" size="33.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto Black" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="firstNameText" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto Black" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="lastNameText" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto Black" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="usernameText" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="271.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto Black" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="passwordText" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="152.0" prefWidth="263.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="157.0" prefWidth="117.0">
+                     <children>
+                        <Button fx:id="joinBttn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleJoinBttn" prefHeight="25.0" prefWidth="106.0" text="Join" textFill="WHITE" />
+                        <Button fx:id="goBackBttn" mnemonicParsing="false" onAction="#handleGoBackBttn" text="Go Back">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin></Button>
+                     </children></VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Text fx:id="statusText" layoutX="265.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="221.24905325472355">
+         <font>
+            <Font name="Roboto Black" size="28.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

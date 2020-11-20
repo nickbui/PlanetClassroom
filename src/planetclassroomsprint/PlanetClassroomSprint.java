@@ -1,5 +1,6 @@
 package planetclassroomsprint;
 
+import java.io.IOException;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 
@@ -8,6 +9,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import javafx.stage.Stage;
+
+
+
 
 /**
  *
@@ -20,7 +24,6 @@ public class PlanetClassroomSprint extends Application {
       Parent root =FXMLLoader.load(getClass().getResource("/View/LoginView.fxml"));
       
       Scene primaryScence = new Scene(root);
-      
       stage.setTitle("Welcome");
       stage.setScene(primaryScence);
       stage.show();
@@ -29,9 +32,11 @@ public class PlanetClassroomSprint extends Application {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         launch(args);
     }
+    
+    
     
 }
 
