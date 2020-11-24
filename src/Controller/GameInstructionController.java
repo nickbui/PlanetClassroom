@@ -55,16 +55,16 @@ public class GameInstructionController implements Initializable {
             anchor.getChildren().clear();
             anchor.getChildren().addAll(mathRoot);
         } else if(subjectType.equals("science")){
-//            FXMLLoader scienceLoader = new FXMLLoader(getClass().getResource("/View/ScienceGameView.fxml"));
-//            Parent scienceRoot = (Parent) scienceLoader.load();
-//            ScienceGameController science = scienceLoader.getController();
-//            science.setCurrentStudent(currentStudent);
-//            anchor.getChildren().clear();
-//            anchor.getChildren().addAll(scienceRoot);
-            FXMLLoader spaceLoader = new FXMLLoader(getClass().getResource("/View/SpaceshipGameView.fxml"));
-            Parent spaceRoot = (Parent) spaceLoader.load();
+            FXMLLoader scienceLoader = new FXMLLoader(getClass().getResource("/View/ScienceGameView.fxml"));
+            Parent scienceRoot = (Parent) scienceLoader.load();
+            ScienceGameController science = scienceLoader.getController();
+            science.setCurrentStudent(currentStudent);
             anchor.getChildren().clear();
-            anchor.getChildren().addAll(spaceRoot);
+            anchor.getChildren().addAll(scienceRoot);
+//            FXMLLoader spaceLoader = new FXMLLoader(getClass().getResource("/View/SpaceshipGameView.fxml"));
+//            Parent spaceRoot = (Parent) spaceLoader.load();
+//            anchor.getChildren().clear();
+//            anchor.getChildren().addAll(spaceRoot);
         }
     }
     

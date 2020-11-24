@@ -65,13 +65,13 @@ public class MathGameController implements Initializable {
         
         
         
-        while(game.judgePoint24(nums) == false) {
+        while(game.gameNumberGenerator(nums) == false) {
             nums.set(0, randomNumber());
             nums.set(1, randomNumber());
             nums.set(2, randomNumber());
             nums.set(3, randomNumber());
         }
-        if(game.judgePoint24(nums) == true){
+        if(game.gameNumberGenerator(nums) == true){
             int num1 = nums.get(0);
             int num2 = nums.get(1);
             int num3 = nums.get(2);

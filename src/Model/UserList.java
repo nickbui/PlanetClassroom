@@ -5,7 +5,11 @@
  */
 package Model;
 
+import java.io.FileReader;
 import java.util.ArrayList;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 /**
  *
@@ -15,10 +19,25 @@ public class UserList {
    
     private ArrayList<String> authenticatedUsers;
     private ArrayList<String> authenticatedPassword;
+    
+    Object ob;
+    JSONArray studentArr = new JSONArray();
+    JSONObject studentObj = new JSONObject();
 
     public UserList() {
         this.authenticatedUsers = new ArrayList<>();
         this.authenticatedPassword = new ArrayList<>();
+        
+        JSONParser jp = new JSONParser();
+        
+        try{
+            FileReader reader = new FileReader("student.json");
+            ob = jp.parse(reader);
+            studentArr = (JSONArray)ob;
+           reader.close();
+        } catch(Exception e) {
+            System.out.println("Something went wrong");
+        }
     }
 
     /**
@@ -36,29 +55,20 @@ public class UserList {
     }
     
     public boolean authenticate(String user, String password) {
-        if (isUserInTheUserList(user) && isPassInThePassList(password)) {
-            return true;
-        } else {
-            return false;
+        boolean authentication = false;
+        
+        for(int i = 0; i < studentArr.size(); i++){
+            studentObj = (JSONObject) studentArr.get(i);
+            if(user.equals(studentObj.get("username")) && password.equals(studentObj.get("password"))){
+                authentication = true;
+                break;
+            } else{
+                authentication = false;
+            }
         }
+        return authentication;
     }
     
-    public boolean isUserInTheUserList(String user) {
-        if (this.authenticatedUsers.contains(user)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    
-    public boolean isPassInThePassList(String password) {
-        if(this.authenticatedPassword.contains(password)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     /**
      * @param authenticatedUsers the authenticatedUsers to set
      */
@@ -72,12 +82,5 @@ public class UserList {
     public void setAuthenticatedPassword(ArrayList<String> authenticatedPassword) {
         this.authenticatedPassword = authenticatedPassword;
     }
-   
-    public int userNumber(ArrayList<String> authenticatedUsers) {
-        int userNumber = 0;
-        for(int i = 0; i< authenticatedUsers.size(); i++) {
-            userNumber = i;
-        }
-        return userNumber + 1;
-    }
+ 
 }

@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Model.Model;
 import Model.Student;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -21,9 +22,11 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -50,13 +53,19 @@ public class SettingsController implements Initializable {
   
     @FXML private Circle trigger;
     @FXML private Rectangle background;
-    @FXML private Text themeText;
+    @FXML private Text themeText, passwordStatus;
     @FXML private AnchorPane settingAnchor;
+    @FXML private TextField oldPassword, newPassword;
+    
+    
+    
     public Student currentStudent;
     boolean isOn;
-   private boolean darkTheme;
+    private boolean darkTheme;
+    String oldPass;
+    String newPass;
    
-   Object ob;
+    Object ob;
     JSONArray studentArr = new JSONArray();
     JSONObject studentObj = new JSONObject();
     JSONObject updatedStudentObj;
@@ -70,6 +79,7 @@ public class SettingsController implements Initializable {
         });
        
         JSONParser jp = new JSONParser();
+        
         try{
             FileReader reader = new FileReader("student.json");
             ob = jp.parse(reader);
@@ -216,6 +226,34 @@ public class SettingsController implements Initializable {
      */
     public void setDarkTheme(boolean darkTheme) {
         this.darkTheme = darkTheme;
+    }
+    
+    public void handleChangeBttn(ActionEvent event){
+        oldPass = oldPassword.getText();
+        newPass = newPassword.getText();
+        
+        if(oldPass.equals(currentStudent.getPassword()) && !newPass.isEmpty()){
+            passwordStatus.setText("Your old password has been changed");
+            passwordStatus.setFill(Color.GREEN);
+            currentStudent.setPassword(newPass);
+            updatedStudentObj = SettingsController.this.getStudentObject();
+            updatedStudentObj.put("password", newPass);
+            studentArr.remove(SettingsController.this.getStudentObject());
+            studentArr.add(updatedStudentObj);
+            try{
+                try (FileWriter file = new FileWriter("student.json")) {
+                    file.write(studentArr.toJSONString());
+                }
+            }catch(IOException e) {
+                System.out.println("Something went wrong");
+            }
+        } else if (!oldPass.equals(currentStudent.getPassword()) && !newPass.isEmpty()){
+            passwordStatus.setText("You entered the wrong old password");
+            passwordStatus.setFill(Color.RED);
+        } else if (oldPass.isEmpty() || newPass.isEmpty()) {
+            passwordStatus.setText("You did not fill out a field");
+            passwordStatus.setFill(Color.RED);
+        }
     }
    
 }

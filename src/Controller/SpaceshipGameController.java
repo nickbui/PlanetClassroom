@@ -41,7 +41,6 @@ public class SpaceshipGameController implements Initializable {
     @FXML private Button startBttn;
     
     FXMLLoader spaceLoader = new FXMLLoader(getClass().getResource("/View/SpaceGameMainView.fxml"));
-    SpaceGameMainController space = spaceLoader.getController();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

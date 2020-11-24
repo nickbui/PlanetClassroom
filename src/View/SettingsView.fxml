@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
@@ -18,6 +20,21 @@
       <Text fx:id="themeText" layoutX="179.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0">
          <font>
             <Font name="Roboto" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="485.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password" wrappingWidth="155.96484375">
+         <font>
+            <Font name="Roboto Black" size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="oldPassword" layoutX="534.0" layoutY="162.0" />
+      <Button layoutX="534.0" layoutY="252.0" mnemonicParsing="false" onAction="#handleChangeBttn" text="Change" />
+      <TextField fx:id="newPassword" layoutX="534.0" layoutY="203.0" />
+      <Text layoutX="449.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Old Password" />
+      <Text layoutX="449.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password" />
+      <Text fx:id="passwordStatus" layoutX="465.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Roboto Bold" size="13.0" />
          </font>
       </Text>
    </children>

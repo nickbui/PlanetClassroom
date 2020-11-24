@@ -26,11 +26,6 @@ public final class Model {
     public Model() {
         uL = new UserList();
         this.userdataFromJSON();
-        for (int i= 0; i<studentList.size(); i++) {
-            this.addUserToList(studentList.get(i).getUsername());
-            this.addPassToList(studentList.get(i).getPassword());
-        }
-   
     }
 
 

@@ -17,7 +17,7 @@ public class MathGame24 {
     
     }
     
-    public boolean judgePoint24(ArrayList<Integer> nums) {
+    public boolean gameNumberGenerator(ArrayList<Integer> nums) {
         ArrayList A = new ArrayList<Double>();
         for (int v: nums) A.add((double) v);
         return solve(A);
