@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="PlanetClassroom.jar" size="2914757" download="eager" />
+    <jar href="PlanetClassroom.jar" size="2904500" download="eager" />
     <jar href="lib\JSON.org.jar" size="65258" download="eager" />
     <jar href="lib\json-simple-1.1.jar" size="16046" download="eager" />
   </resources>

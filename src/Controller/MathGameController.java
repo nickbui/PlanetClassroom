@@ -217,8 +217,8 @@ public class MathGameController implements Initializable {
     }
         
     public int randomNumber(){
-        int min = 1;
-        int max = 26;
+        int min = 0;
+        int max = 15;
         int randomNumber = (int)(Math.random()*(max-min + 1) + min);
         return randomNumber;
     }

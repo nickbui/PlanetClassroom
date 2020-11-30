@@ -24,8 +24,12 @@ public class MathGame24 {
     }
     
     private boolean solve(ArrayList<Double> nums) {
-        if (nums.isEmpty()) return false;
-        if (nums.size() == 1) return Math.abs(nums.get(0) - 24) < 1e-6;
+        if (nums.isEmpty()) {
+            return false;
+        }
+        if (nums.size() == 1) {
+            return Math.abs(nums.get(0) - 24) < 1e-6;
+        }
 
         for (int i = 0; i < nums.size(); i++) {
             for (int j = 0; j < nums.size(); j++) {
